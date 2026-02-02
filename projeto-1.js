@@ -20,3 +20,7 @@ function emStock(){
     return inventario.filter(produto => produto.emStock === true)
 }
 
+function emStockAbaixoValor(valor){
+    return inventario.filter(produto => produto.emStock === true && produto.preco < valor)
+}
+
