@@ -29,3 +29,11 @@ function semStock(){
         return inventario.filter(produto => produto.emStock === false)
     }
 }
+
+function adicionarPrecoComIVA(taxaIVA = 0.23) {
+  return inventario.map(produto => ({
+    ...produto,
+    precoComIVA: +(produto.preco * (1 + taxaIVA)).toFixed(2)
+  }))
+}
+
