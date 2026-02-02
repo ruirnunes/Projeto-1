@@ -37,3 +37,7 @@ function adicionarPrecoComIVA(taxaIVA = 0.23) {
   }))
 }
 
+function valorInventario(){
+    return inventario.reduce((acumulado, produto) => acumulado + produto.preco, 0)
+}
+
