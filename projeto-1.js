@@ -24,3 +24,8 @@ function emStockAbaixoValor(valor){
     return inventario.filter(produto => produto.emStock === true && produto.preco < valor)
 }
 
+function semStock(){
+    if (inventario.some(produto => produto.emStock === false)){
+        return inventario.filter(produto => produto.emStock === false)
+    }
+}
